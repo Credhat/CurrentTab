@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "oTUuzpxXfBSvr1piWtoR5xQ/T6tm6P53cWbo4XdSKfaMoUHQzVjp7pi/dlt9yhhrlATBzsvlxn9OSs3cu3WUDw==",
+  "success": true,
+  "projectFilePath": "Y:\\VisualStudio2022\\Source\\Repos\\CurrentTab\\CurrentTab\\CurrentTab.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\WangMeiLi\\.nuget\\packages\\materialdesigncolors\\2.0.9\\materialdesigncolors.2.0.9.nupkg.sha512",
+    "C:\\Users\\WangMeiLi\\.nuget\\packages\\materialdesignthemes\\4.6.1\\materialdesignthemes.4.6.1.nupkg.sha512",
+    "C:\\Users\\WangMeiLi\\.nuget\\packages\\showmethexaml\\2.0.0\\showmethexaml.2.0.0.nupkg.sha512",
+    "C:\\Users\\WangMeiLi\\.nuget\\packages\\showmethexaml.msbuild\\2.0.0\\showmethexaml.msbuild.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
