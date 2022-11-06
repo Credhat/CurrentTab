@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-Y:\VisualStudio2022\Source\Repos\CurrentTab\CurrentTab\obj\Debug\net6.0-windows\
+Y:\VisualStudio2022\Source\Repos\CurrentTab\CurrentTab\obj\Release\net6.0-windows\
 CurrentTab
 none
 false
-TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
 Y:\VisualStudio2022\Source\Repos\CurrentTab\CurrentTab\App.xaml
 11407045341
 
