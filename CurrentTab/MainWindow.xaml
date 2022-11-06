@@ -5,25 +5,78 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CurrentTab"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
         
+        Title="CurrentTAB" Height="450" Width="800" MinHeight="200" MinWidth="200"
+        x:Name="CurrentTABMainPage"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        ResizeMode="CanResize"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal" 
-        TextOptions.TextRenderingMode="Auto"        
-        Background="{DynamicResource MaterialDesignPaper}"
+        TextOptions.TextRenderingMode="Auto"     
         FontFamily="{DynamicResource MaterialDesignFont}"
-        >
-    <Grid>
-        <StackPanel>
-            <materialDesign:Card Padding="32" Margin="16">
-                <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}">My First Material Design App</TextBlock>
-            </materialDesign:Card>
-        </StackPanel>
+    >
+    <Grid x:Name="BackgroundOriginalGrid" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="12"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="TopGrid" Height="12" Grid.Row="0" MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="48"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="TopTitle" Grid.Column="0" Content="CurrentTAB" VerticalAlignment="Center" FontSize="10" />
+            <Label x:Name="TopBindingPage" Grid.Column="1" Content="CurrentTAB" FontSize="10" VerticalAlignment="Center" VerticalContentAlignment="Center" />
+            <Grid x:Name="TopThreeFunction" Grid.Column="2" HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Button Name="MinimizeBtn"  Grid.Column="0" Background="#FF96C562" BorderBrush="Transparent"/>
+                <Button Name="MaximizeBtn" Grid.Column="1" Background="#FF6385A0" BorderBrush="Transparent"/>
+                <Button Name="CloseWindowBtn" Grid.Column="2" Background="#FFB56464" BorderBrush="Transparent"/>
+            </Grid>
+        </Grid>
+
+        <Grid Background="#FFFDE22B" Height="Auto" Grid.Row="1">
+
+            <TabControl  MinHeight="200" Width="Auto" MinWidth="200" HorizontalContentAlignment="Left" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.CanContentScroll="True">
+
+                <TabItem Header="TabItem" Background="Black">
+                    <Grid x:Name="TabItem_Grid" Background="#FFE5E5E5" Height="Auto">
+                        <materialDesign:Card Padding="32" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}">My First Material Design App</TextBlock>
+                        </materialDesign:Card>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="TabItem1" Background="Black">
+                    <Grid x:Name="TabItems_1" Background="#FFE5E5E5">
+                        <materialDesign:Card Padding="32" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                            <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}">My First</TextBlock>
+                        </materialDesign:Card>
+                    </Grid>
+                </TabItem>
+
+            </TabControl>
+
+        </Grid>
+
     </Grid>
 </Window>
+
+<!--Background="{DynamicResource MaterialDesignPaper}"-->
+
+
 
 <!--MaterialToolKit
 <Window . . .
